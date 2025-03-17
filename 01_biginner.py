@@ -63,6 +63,7 @@ while count > 0:
     count=count-1
 
 """
+'''
 # Advanced: Build a grading system that loops through a dictionary of student scores (e.g., {"Alice": 85, "Bob": 72}) and assigns letter grades (A/B/C/D/F)
 # Sample student scores
 scores = {
@@ -91,6 +92,31 @@ def assign_grade(score):
 for student, score in scores.items():
     grade = assign_grade(score)
     print(f"{student}: {grade}")
-
-
 print(scores)
+
+############### sets,tuples,lists
+#################################
+#################################
+#################################
+
+# list are ordered and changeable. Allows duplicate members.
+# tuple are ordered and unchangeable. Allows duplicate members.
+# set are unordered and unindexed. No duplicate members.
+
+fruits=["apple","banana","cherry","apple"]
+for fruit in fruits:
+    print(f"this is different fruit {fruit}")
+
+# help function is used to get information
+print(help(fruits))
+'''
+fruits=["apple","banana","cherry","apple"]
+# fruits[0]="kiwi" # this will change the first item to kiwi
+# fruits.append("kiwi") # this will add kiwi to the end of the list
+# fruits.insert(1,"kiwi") # this will add kiwi to the second position
+# fruits.remove("apple") # this will remove the first apple
+# fruits.pop(1) # this will remove the second item
+# fruits.clear() # this will clear the list
+# fruits.sort() # this will sort the list
+# fruits.reverse() # this will reverse the list
+print(fruits)
