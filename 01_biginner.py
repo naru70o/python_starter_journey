@@ -94,6 +94,7 @@ for student, score in scores.items():
     print(f"{student}: {grade}")
 print(scores)
 
+######################Collections
 ############### sets,tuples,lists
 #################################
 #################################
@@ -103,13 +104,14 @@ print(scores)
 # tuple are ordered and unchangeable. Allows duplicate members.
 # set are unordered and unindexed. No duplicate members.
 
+
+############# Lists
 fruits=["apple","banana","cherry","apple"]
 for fruit in fruits:
     print(f"this is different fruit {fruit}")
 
 # help function is used to get information
 print(help(fruits))
-'''
 fruits=["apple","banana","cherry","apple"]
 # fruits[0]="kiwi" # this will change the first item to kiwi
 # fruits.append("kiwi") # this will add kiwi to the end of the list
@@ -120,3 +122,40 @@ fruits=["apple","banana","cherry","apple"]
 # fruits.sort() # this will sort the list
 # fruits.reverse() # this will reverse the list
 print(fruits)
+'''
+
+"""
+############ Sets
+# sets are unordered and unindexed. No duplicate members.but add and remove is faster than list
+fruits={"apple","banana","cherry","apple"}
+# fruits.add("kiwi") # this will add kiwi to the set
+# fruits.remove("apple") # this will remove the first apple
+# fruits.discard("apple") # this will remove the first apple
+# fruits.pop() # this will remove the first item
+# fruits.clear() # this will clear the set
+print(fruits)
+"""
+
+"""
+############ Tuples
+# tuples are ordered and unindexed. No duplicate members. but add and remove is slower than list
+fruits=("apple","banana","cherry","apple")
+# fruits[1]="kiwi" # this will give an error because tuples are immutable
+# fruits.append("kiwi") # this will give an error because tuples are immutable
+# fruits.remove("apple") # this will give an error because tuples are immutable
+# fruits.pop(1) # this will give an error because tuples are immutable
+# fruits.clear() # this will give an error because tuples are immutable
+print(fruits)
+"""
+
+################### Exercise
+########## Weight coverter
+
+weight=float(input("Enter your weight: "))
+unit=input("(L)bs or (K)g: ")
+if unit.upper()=="L":
+    print(f"You are {round(weight*0.453592,2)} kilos")
+elif unit.upper()=="K":
+    print(f"You are {round(weight/0.453592,2)} pounds")
+else: 
+    print("Invalid input")
