@@ -1,5 +1,6 @@
-# conditionals
+import re
 
+# conditionals
 """
 # syntax
 
@@ -63,9 +64,11 @@ while count > 0:
     count=count-1
 
 """
-'''
+
 # Advanced: Build a grading system that loops through a dictionary of student scores (e.g., {"Alice": 85, "Bob": 72}) and assigns letter grades (A/B/C/D/F)
 # Sample student scores
+
+'''
 scores = {
     "Alice": 85,
     "Bob": 72,
@@ -106,51 +109,78 @@ print(scores)
 
 
 ############# Lists
+###################
 fruits=["apple","banana","cherry","apple"]
 for fruit in fruits:
     print(f"this is different fruit {fruit}")
 
 # help function is used to get information
 print(help(fruits))
+
 fruits=["apple","banana","cherry","apple"]
+
 # fruits[0]="kiwi" # this will change the first item to kiwi
+
 # fruits.append("kiwi") # this will add kiwi to the end of the list
+
 # fruits.insert(1,"kiwi") # this will add kiwi to the second position
+
 # fruits.remove("apple") # this will remove the first apple
+
 # fruits.pop(1) # this will remove the second item
+
 # fruits.clear() # this will clear the list
+
 # fruits.sort() # this will sort the list
+
 # fruits.reverse() # this will reverse the list
+
 print(fruits)
 '''
 
-"""
 ############ Sets
+##################
 # sets are unordered and unindexed. No duplicate members.but add and remove is faster than list
+
+"""
 fruits={"apple","banana","cherry","apple"}
+
 # fruits.add("kiwi") # this will add kiwi to the set
+
 # fruits.remove("apple") # this will remove the first apple
+
 # fruits.discard("apple") # this will remove the first apple
+
 # fruits.pop() # this will remove the first item
+
 # fruits.clear() # this will clear the set
+
 print(fruits)
 """
 
-"""
 ############ Tuples
-# tuples are ordered and unindexed. No duplicate members. but add and remove is slower than list
+# tuples are ordered and unindexed. No duplicate members. but add and remove is slower than list .
+
+"""
 fruits=("apple","banana","cherry","apple")
+
 # fruits[1]="kiwi" # this will give an error because tuples are immutable
+
 # fruits.append("kiwi") # this will give an error because tuples are immutable
+
 # fruits.remove("apple") # this will give an error because tuples are immutable
+
 # fruits.pop(1) # this will give an error because tuples are immutable
+
 # fruits.clear() # this will give an error because tuples are immutable
+
 print(fruits)
 """
 
 ################### Exercise
 ########## Weight coverter
 
+"""
 weight=float(input("Enter your weight: "))
 unit=input("(L)bs or (K)g: ")
 if unit.upper()=="L":
@@ -159,3 +189,26 @@ elif unit.upper()=="K":
     print(f"You are {round(weight/0.453592,2)} pounds")
 else: 
     print("Invalid input")
+"""
+
+############### Strings
+#######################
+
+"""
+# name="kadar"
+# string methods
+# print(name.upper()) # converts all the characters to uppercase
+# print(name.lower()) # converts all the characters to lowercase
+# print(name.isupper()) # checks if all the characters are uppercase
+# print(name.islower()) # checks if all the characters are lowercase
+# print(name.isalpha()) # checks if all the characters are alphabets
+# print(name.isalnum()) # checks if all the characters are alphanumeric
+# print(name.isnumeric()) # checks if all the characters are numeric
+# print(name.startswith("k")) # checks if the string starts with the given character    
+# print(name.endswith("r")) # checks if the string ends with the given character
+# print(name.find("a")) # returns the index of the first occurrence of the given character
+# print(name.replace("a","o")) # replaces all the occurrences of the given character with the new character
+# print(name.split("a")) # splits the string at the given character and returns a list of strings
+# print(name.match("k",name)) # checks if the string matches the given pattern
+
+"""
