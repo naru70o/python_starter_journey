@@ -198,10 +198,10 @@ else:
 # name="kadar"
 # string methods
 # print(name.upper()) # converts all the characters to uppercase
-# print(name.lower()) # converts all the characters to lowercase
+# print(name.lower()) # converts all the characters to lowercase and returns a new string
 # print(name.isupper()) # checks if all the characters are uppercase
 # print(name.islower()) # checks if all the characters are lowercase
-# print(name.isalpha()) # checks if all the characters are alphabets
+# print(name.isalpha()) # checks if all the characters are alphabets and returns true if all the characters are alphabets
 # print(name.isalnum()) # checks if all the characters are alphanumeric
 # print(name.isnumeric()) # checks if all the characters are numeric
 # print(name.startswith("k")) # checks if the string starts with the given character    
@@ -212,3 +212,21 @@ else:
 # print(name.match("k",name)) # checks if the string matches the given pattern
 
 """
+
+##################
+#### users handler
+
+'''
+users=[]
+name=input("Enter your name: ")
+email=input("Enter your email: ")
+
+regex=r'^[^\s@]+@[^\s@]+\.[^\s@]+$'
+if not re.match(regex,email):
+        print("Invalid email")
+elif not name.lower().isalpha():
+        print("Invalid name")
+    
+users.append({"name":name,"email":email})
+print(users)
+'''
