@@ -85,3 +85,43 @@ float=16
 print(float)
 max_players_on_server()
 '''
+
+
+#######################
+## Bitwise “&” Operator
+"""
+
+bitways = 0b0101 & 0b0111
+# bitways = 1 & 1
+# print(bitways) 
+
+can_create_guild = 0b1000
+can_review_guild = 0b0100
+can_delete_guild = 0b0010
+can_edit_guild = 0b0001
+
+
+def get_create_bits(user_permissions):
+    return user_permissions & can_create_guild
+
+
+def get_review_bits(user_permissions):
+    return user_permissions & can_review_guild
+
+
+def get_delete_bits(user_permissions):
+    return user_permissions & can_delete_guild
+
+
+def get_edit_bits(user_permissions):
+    return user_permissions & can_edit_guild
+
+user1_permissions = 0b1001  # Can create and edit
+user2_permissions = 0b0100  # Can review only
+user3_permissions = 0b0010  # Can delete only
+
+print(f"User 1 can create: {get_create_bits(user1_permissions)}")   # Output: 0b1000 (True-ish)
+print(f"User 1 can review: {get_review_bits(user1_permissions)}")   # Output: 0b0000 (False)
+print(f"User 1 can delete: {get_delete_bits(user1_permissions)}")   # Output: 0b0000 (False)
+print(f"User 1 can edit: {get_edit_bits(user1_permissions)}") # Output: 0b0001 (True-ish)
+"""
