@@ -124,4 +124,159 @@ print(f"User 1 can create: {get_create_bits(user1_permissions)}")   # Output: 0b
 print(f"User 1 can review: {get_review_bits(user1_permissions)}")   # Output: 0b0000 (False)
 print(f"User 1 can delete: {get_delete_bits(user1_permissions)}")   # Output: 0b0000 (False)
 print(f"User 1 can edit: {get_edit_bits(user1_permissions)}") # Output: 0b0001 (True-ish)
+
+-------------------------------------------------
+
+NOTE : Bitwise operators are special tools that allow you to directly manipulate these individual bits within a number.
+and &
+or |
 """
+
+##############################
+##############################
+################# Damage Meter
+"""
+Assignment
+
+Fix the intern's syntax error. The calculate_dps function should accept two arguments, but due to a syntax error, it's being called with 4 instead. Use the proper delimiter for thousands so that the numbers are still easy to parse visually.
+
+The two numbers should be:
+
+damage: 8 million, time: 45
+damage: 10 million, time: 49
+
+def main():
+    calculate_dps(8, 45)
+    calculate_dps(10, 49)
+
+
+# Don't edit below this line
+
+
+def calculate_dps(damage, time):
+    dps = damage / time
+    print(f"Damage per second: {dps}")
+    print("=====================================")
+
+
+main()
+"""
+
+##############################
+##############################
+################# Converting Binary
+
+
+"""
+The built-in int() function can convert a binary string to an integer. It takes a second argument that specifies the base of the number (binary is base 2). For example:
+
+# this is a binary string
+binary_string = "100"
+
+# convert binary string to integer
+num = int(binary_string, 2)
+print(num)
+# 4
+
+-------------------------------------------------
+# Assignment
+
+def binary_string_to_int(num_servers, num_players, num_admins):
+    data_a=int(num_servers,2)
+    data_b=int(num_players,2)
+    data_c=int(num_admins,2)
+    return data_a,data_b,data_c
+
+data_a, data_b, data_c = binary_string_to_int("100", "101", "110")
+print(data_a)
+# 4
+print(data_b)
+# 5
+print(data_c)
+# 6
+"""
+
+
+##################
+###### for in Loop 
+
+'''
+def numbers():
+    for i in range(0, 200,2): # start , end , increment
+        print(i)
+
+numbers()
+
+
+# Assigment
+Fix the bug in the sum_of_numbers function. Instead of adding 1 to total at each iteration of the loop, it should add i. For example, instead of:
+
+1 + 1 + 1 + 1 + 1...
+
+we want:
+
+0 + 1 + 2 + 3 + 4...
+
+def sum_of_numbers(start, end):
+    total = 0
+    for i in range(start, end):
+        total += i
+        print(i)
+
+        
+    return total
+
+def sum_of_odd_numbers(end):
+    total = 0
+    for i in range(1, end,2):
+        total += i
+        print(i, " : odd")
+
+    return total
+
+total = sum_of_numbers(0,4)
+print(total)
+
+total1 = sum_of_odd_numbers(12)
+print(total1," total")
+'''
+
+"""
+Assignment
+In Fantasy Quest, player characters regenerate health when standing still while away from enemies. This means they will gain health but can't run from enemies that are coming towards them while regenerating.
+
+Complete the regenerate function using a while loop. It takes current_health, max_health and enemy_distance integers.
+
+While regenerating health, a character first gains 1 health each iteration until it reaches the max_health amount.
+The enemy_distance then shortens by 2 for each iteration.
+If an enemy is at a distance of 3 or less from the character, the character is not able to regenerate health. (Flipping that, if an enemy is more than a distance of 3 from the character, then the character is able to regenerate health.)
+
+def regenerate(current_health, max_health, enemy_distance):
+    if ( enemy_distance <= 3):
+        while current_health < max_health:
+            current_health+=1
+            
+    return current_health
+
+current_health = regenerate(0,100,1)        
+print(current_health," current_health")
+
+###### Match Countdown
+###### We need a timer to countdown the start of PvP matches in Fantasy Quest.
+
+def countdown_to_start():
+    for i in range(10,-1,-1):
+        print(f"{i}...")
+
+countdown_to_start()        
+
+def calculate_experience_points(level):
+    total = level * 2
+    return total    
+
+level = calculate_experience_points(15);
+print(level)
+"""
+
+
+    
