@@ -279,4 +279,36 @@ print(level)
 """
 
 
-    
+##########################Reverse List
+############################Assignment
+
+"""
+Some of our players would like to view their inventories in reverse order.
+
+Let's write a function that takes a list as an input and returns a new list except all the items are in reverse order.
+
+For example:
+
+[1, 2, 3] -> [3, 2, 1]
+['a', 'b', 'c', 'd'] -> ['d', 'c', 'b', 'a']
+
+reversed_items = []
+def reverse_list(items):
+    for item in items:
+        reversed_items.insert(0, item)
+    return reversed_items
+
+reverse_list(["c","b","a"])
+print(reversed_items)
+
+reversed_items = []
+def reverse_list(items):
+    for item in range(len(items),0,-1):
+        reversed_item = items.pop()
+        reversed_items.append(reversed_item)
+        # print(item)
+        print(reversed_item)
+
+reverse_list([9,8,7,6,5,4,3,2,1])        
+print(reversed_items)
+"""

@@ -19,7 +19,7 @@ else: print("age doesn't matter")
 number=int(input())
 if number % 2 == 0:
     print("this is even")
-elif number %2 == 1:
+elif number % 2 == 1:
     print("this is odd")
 else : print("this is unkonw")
 """
