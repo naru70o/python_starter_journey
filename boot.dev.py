@@ -312,3 +312,104 @@ def reverse_list(items):
 reverse_list([9,8,7,6,5,4,3,2,1])        
 print(reversed_items)
 """
+
+######################
+######### Dictionaries
+
+"""
+Because dictionaries rely on unique keys, you can't have two of the same key in the same dictionary. If you try to use the same key twice, the first value will simply be overwritten.
+"""
+# def get_character_record(name, server, level, rank):
+#     return {
+#         "name": name,
+#         "server": server,
+#         "level": level,
+#         "level": 1,
+#         "rank": rank,
+#         "rank": 2,
+#         "id": f"{name}#{server}",
+#     }
+
+# object = get_character_record("kadar","2571sajd",29,9)
+# print(object)
+
+"""
+A value is retrieved from a dictionary by specifying its corresponding key in square brackets. The square brackets look similar to indexing into a list.
+"""
+
+# car = {
+#     "make": "Toyota",
+#     "model": "Camry"
+# }
+# print(car["make"]) # you can't use indexing
+# Prints: Toyota
+
+"""
+Updating Dictionary Values
+
+If you try to set the value of a key that already exists, you'll end up just updating the value of that key.
+"""
+
+# planets = {
+#     "Pluto": True,
+# }
+# planets["Pluto"] = False
+# print(planets["Pluto"])
+# Prints False
+
+"""
+Delition
+
+You can delete existing keys using the del keyword.
+"""
+
+# planets = {
+#     "Mercury": 0,
+#     "Venus": 0,
+#     "Earth": 1,
+#     "Mars": 2,
+#     "Jupiter": 79,
+#     "Saturn": 9
+# }
+
+# del planets["Saturn"]
+# print(planets)
+
+"""
+Checking for Existence
+
+If you're unsure whether or not a key exists in a dictionary, use the in keyword.
+"""
+
+# cars = {
+#     "ford": "f150",
+#     "toyota": "camry"
+# }
+
+# print("ford" in cars)
+# # Prints: True
+
+# print("gmc" in cars)
+# Prints: False
+
+
+"""
+Iterating Over a Dictionary in Python
+
+We can iterate over a dictionary's keys using the same no-index syntax we used to iterate over the values in a list. With access to the dictionary's keys, we also have access to their corresponding values.
+"""
+
+# fruit_sizes = {
+#     "apple": "small",
+#     "banana": "large",
+#     "grape": "tiny"
+# }
+
+# for name in fruit_sizes:
+#     fruit_size=fruit_sizes[name]
+#     print(f"name: {name}, size: {fruit_size}")
+
+
+# name: apple, size: small
+# name: banana, size: large
+# name: grape, size: tiny
