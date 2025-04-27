@@ -413,3 +413,29 @@ We can iterate over a dictionary's keys using the same no-index syntax we used t
 # name: apple, size: small
 # name: banana, size: large
 # name: grape, size: tiny
+
+"""
+Sets
+
+Sets are like Lists, but they are unordered and they guarantee uniqueness. Only ONE of each value can be in a set.
+"""
+
+fruits = {"apple", "banana", "grape"}
+print(type(fruits))
+# Prints: <class 'set'>
+
+print(fruits)
+# Prints: {'banana', 'grape', 'apple'}
+
+"""
+
+An Empty Set
+
+Because the empty bracket {} syntax creates an empty dictionary, to create an empty set, you need to use the set() function.
+"""
+
+fruits = set()
+fruits.add("pear")
+print(fruits)
+# Prints: {'pear'}
+
